@@ -16,7 +16,7 @@ This repository contains tooling plugins for the <a href="https://github.com/rea
 
 <h2 align="center" style="text-align: center;">List of Plugins</h2>
 
-| Name                                                                             | Description                                |
-|----------------------------------------------------------------------------------|--------------------------------------------|
-| [GraphQL Client](./plugins/graphql-client/README.md)                             | GraphQL client                             |
-| [GraphQL Schema Visualization](./plugins/graphql-schema-visualization/README.md) | Visualization of the GraphQL schema        |
+| Name                                                                             | Description                                | Status                                  |
+|----------------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------|
+| [GraphQL Client](./plugins/graphql-client/README.md)                             | GraphQL client                             | Implemented, Move from `plugins-core`   |
+| [GraphQL Schema Visualization](./plugins/graphql-schema-visualization/README.md) | Visualization of the GraphQL schema        | Implemented, Move from `plugins-core`   |
