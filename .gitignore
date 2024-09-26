@@ -13,9 +13,20 @@ Cargo.lock
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
-# RustRover
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+# Prevent tokens to be commited
+**/*.token
+
+# Prevent test coverage results to be commited
+cobertura.xml
+tarpaulin-report.html
+
+# Exclude IDE project files
+.idea
+
+**/node_modules
+
+**/yarn-error.log
+**/yarn.lock
+
+# Exclude generated frontend bundles
+plugins/**/web/dist/bundle
