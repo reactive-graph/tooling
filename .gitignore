@@ -30,3 +30,5 @@ tarpaulin-report.html
 
 # Exclude generated frontend bundles
 plugins/**/web/dist/bundle
+
+book/book
