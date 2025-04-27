@@ -33,6 +33,7 @@ uuid = { version = "1.2", features = ["serde", "v4", "v5"] }
 ### Prefer git to crates.io for development
 
 reactive-graph-plugin-api = { version = "0.10.0", git = "https://github.com/reactive-graph/reactive-graph.git" }
+reactive-graph-utils-deployment = { version = "0.10.0", git = "https://github.com/reactive-graph/reactive-graph.git" }
 
 ### Prefer local to git for local development
 
