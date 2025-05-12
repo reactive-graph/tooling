@@ -991,7 +991,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-behaviour-model-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "dashmap",
  "reactive-graph-graph",
@@ -1006,7 +1006,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-behaviour-service-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "async-trait",
  "reactive-graph-behaviour-model-api",
@@ -1021,7 +1021,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-command-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "clap",
  "reactive-graph-graph",
@@ -1038,7 +1038,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-config-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "num_cpus",
  "reactive-graph-remotes-model",
@@ -1048,7 +1048,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-graph"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "dashmap",
  "schemars",
@@ -1063,7 +1063,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-lifecycle"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "async-trait",
 ]
@@ -1071,7 +1071,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-plugin-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "async-trait",
  "http",
@@ -1096,12 +1096,12 @@ dependencies = [
 [[package]]
 name = "reactive-graph-plugin-derive"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 
 [[package]]
 name = "reactive-graph-reactive-derive"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -1112,7 +1112,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-reactive-model-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "reactive-graph-graph",
  "serde_json",
@@ -1123,7 +1123,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-reactive-model-impl"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "dashmap",
  "reactive-graph-behaviour-model-api",
@@ -1138,7 +1138,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-reactive-service-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "async-trait",
  "crossbeam",
@@ -1162,7 +1162,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-remotes-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "chrono",
  "serde",
@@ -1172,7 +1172,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-runtime-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "reactive-graph-graph",
  "serde",
@@ -1183,7 +1183,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-serde"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "serde_json",
  "thiserror 2.0.12",
@@ -1224,7 +1224,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-type-system-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "async-trait",
  "reactive-graph-graph",
@@ -1242,7 +1242,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-type-system-derive"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#47813b524ed34ce44a194517128a7bbc44dc564b"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#794c7a827c196e7567f18ee9a85e1115d60b47ab"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -1359,7 +1359,7 @@ dependencies = [
 [[package]]
 name = "schemars"
 version = "1.0.0-alpha.17"
-source = "git+https://github.com/GREsau/schemars.git#524e5906546a16a73d1b602fcdd3dcf0744afb87"
+source = "git+https://github.com/GREsau/schemars.git#605ca1b06c63ce954bf622734fd62643b163d9d0"
 dependencies = [
  "dyn-clone",
  "ref-cast",
@@ -1372,7 +1372,7 @@ dependencies = [
 [[package]]
 name = "schemars_derive"
 version = "1.0.0-alpha.17"
-source = "git+https://github.com/GREsau/schemars.git#524e5906546a16a73d1b602fcdd3dcf0744afb87"
+source = "git+https://github.com/GREsau/schemars.git#605ca1b06c63ce954bf622734fd62643b163d9d0"
 dependencies = [
  "proc-macro2",
  "quote",
