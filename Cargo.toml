@@ -28,7 +28,7 @@ serde = { version = "1.0", features = ["derive"] }
 springtime = "1.0"
 springtime-di = { version = "1.0", default-features = false, features = ["threadsafe", "derive"] }
 toml = "0.8"
-uuid = { version = "1.2", features = ["serde", "v4", "v5"] }
+uuid = { version = "1.17", features = ["serde", "v4", "v5"] }
 
 ### Prefer git to crates.io for development
 
