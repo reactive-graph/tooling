@@ -15,7 +15,7 @@ license = "MIT"
 repository = "https://github.com/reactive-graph/tooling"
 homepage = "https://tooling.reactive-graph.io/"
 keywords = ["graph", "reactive", "control-flow", "inexor"]
-rust-version = "1.85.0"
+rust-version = "1.87.0"
 
 [workspace.dependencies]
 async-trait = "0.1"
