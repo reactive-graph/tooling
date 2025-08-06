@@ -1,0 +1,9 @@
+(function() {
+    var implementors = Object.fromEntries([["reactive_graph_tooling_graphql_client",[["impl UnsafeUnpin for <a class=\"struct\" href=\"reactive_graph_tooling_graphql_client/plugin/struct.GraphQlClientPlugin.html\" title=\"struct reactive_graph_tooling_graphql_client::plugin::GraphQlClientPlugin\">GraphQlClientPlugin</a>",1,["reactive_graph_tooling_graphql_client::plugin::GraphQlClientPlugin"]],["impl UnsafeUnpin for <a class=\"struct\" href=\"reactive_graph_tooling_graphql_client/provider/struct.GraphQlClientWebResourceProvider.html\" title=\"struct reactive_graph_tooling_graphql_client::provider::GraphQlClientWebResourceProvider\">GraphQlClientWebResourceProvider</a>",1,["reactive_graph_tooling_graphql_client::provider::GraphQlClientWebResourceProvider"]]]],["reactive_graph_tooling_graphql_schema_visualization",[["impl UnsafeUnpin for <a class=\"struct\" href=\"reactive_graph_tooling_graphql_schema_visualization/plugin/struct.GraphQlSchemaVisualizationPlugin.html\" title=\"struct reactive_graph_tooling_graphql_schema_visualization::plugin::GraphQlSchemaVisualizationPlugin\">GraphQlSchemaVisualizationPlugin</a>",1,["reactive_graph_tooling_graphql_schema_visualization::plugin::GraphQlSchemaVisualizationPlugin"]],["impl UnsafeUnpin for <a class=\"struct\" href=\"reactive_graph_tooling_graphql_schema_visualization/provider/struct.GraphQlSchemaVisualizationWebResourceProvider.html\" title=\"struct reactive_graph_tooling_graphql_schema_visualization::provider::GraphQlSchemaVisualizationWebResourceProvider\">GraphQlSchemaVisualizationWebResourceProvider</a>",1,["reactive_graph_tooling_graphql_schema_visualization::provider::GraphQlSchemaVisualizationWebResourceProvider"]]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":57,"fragment_lengths":[725,928]}
