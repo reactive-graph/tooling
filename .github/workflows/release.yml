@@ -253,6 +253,18 @@ jobs:
           matrix.target == 'powerpc64-unknown-linux-gnu' ||
           matrix.target == 'powerpc64le-unknown-linux-gnu' ||
           matrix.target == 'riscv64gc-unknown-linux-gnu'
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install Yarn
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: --cwd plugins/graphql-client/web install
+      - name: Install Yarn
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: --cwd plugins/graphql-schema-visualization/web install
       - name: Build Dynamic Link Libraries
         run: cargo build --release --target ${{ matrix.target }}
       - name: Create Release Archive
