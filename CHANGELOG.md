@@ -12,10 +12,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+### Fixed
+
+### Distribution
+
+### Infrastructure
+
+## [0.10.0-alpha-1] - 2025-08-07
+
+### Added
+
+### Changed
+
 - Refactored into new mono repo `reactive-graph/tooling`
 - Moved plugins `graphql-client` and `graphql-schema-visualization` from `reactive-graph/std` -> `reactive-graph/tooling`
 - Prefix plugins with `tooling` (e.g. `libreactive_graph_tooling_graphql_client`)
 - Build: Bump MSRV 1.85 -> 1.87
+- Upgrade log4rs to 1.4.0
 
 ### Fixed
 
