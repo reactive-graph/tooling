@@ -278,8 +278,14 @@ jobs:
         run: |
           cargo build --release --target x86_64-apple-darwin
           cargo build --release --target aarch64-apple-darwin
+          mkdir -p target/universal-apple-darwin/release
           for PLUGIN in ${{env.PLUGINS}}; do
-            lipo -create target/x86_64-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_$PLUGIN${{matrix.extension}} target/aarch64-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_$PLUGIN${{matrix.extension}} -output target/universal-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_$PLUGIN${{matrix.extension}}
+            lipo \
+              -create \
+                target/x86_64-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_${PLUGIN/-/_}${{matrix.extension}} \
+                target/aarch64-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_${PLUGIN/-/_}${{matrix.extension}} \
+              -output \
+                target/universal-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_${PLUGIN/-/_}${{matrix.extension}}
           done
         if: matrix.target == 'universal-apple-darwin'
       - name: Create Release Archive
