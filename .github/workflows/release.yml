@@ -415,7 +415,7 @@ jobs:
         run: |
           for PLUGIN in ${{env.PLUGINS}}; do
             # It's important to change into the plugin directory and building each package
-            cd $GITHUB_WORKSPACE/plugins/$PLUGIN
+            cd "${{ github.workspace }} /plugins/$PLUGIN"
             cargo deb -p reactive-graph-${{env.PLUGIN_REPOSITORY}}-$PLUGIN --target=${{ matrix.target }} --deb-revision ${{steps.tag.outputs.tag}}
           done
         env:
@@ -425,7 +425,7 @@ jobs:
         run: |
           for PLUGIN in ${{env.PLUGINS}}; do
             # It's important to change into the plugin directory and building each package
-            cd $GITHUB_WORKSPACE/plugins/$PLUGIN
+            cd "${{ github.workspace }}/plugins/$PLUGIN"
             cargo deb -p reactive-graph-${{env.PLUGIN_REPOSITORY}}-$PLUGIN --target=${{ matrix.target }} --deb-revision nightly
           done
         env:
