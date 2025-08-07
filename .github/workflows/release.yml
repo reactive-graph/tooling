@@ -228,6 +228,13 @@ jobs:
         with:
           toolchain: stable
           target: ${{ matrix.target }}
+        if: matrix.target != 'universal-apple-darwin'
+      - name: Install rust toolchain
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: stable
+          targets: "x86_64-apple-darwin, aarch64-apple-darwin"
+        if: matrix.target == 'universal-apple-darwin'
       - name: Install bindgen-cli
         uses: taiki-e/cache-cargo-install-action@v2
         with:
