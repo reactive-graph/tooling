@@ -273,6 +273,15 @@ jobs:
           cmd: --cwd plugins/graphql-schema-visualization/web install
       - name: Build Dynamic Link Libraries
         run: cargo build --release --target ${{ matrix.target }}
+        if: matrix.target != 'universal-apple-darwin'
+      - name: Build Dynamic Link Libraries (universal-apple-darwin)
+        run: |
+          cargo build --release --target x86_64-apple-darwin
+          cargo build --release --target aarch64-apple-darwin
+          for PLUGIN in ${{env.PLUGINS}}; do
+            lipo -create target/x86_64-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_${{PLUGIN}}${{matrix.extension}} target/aarch64-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_${{PLUGIN}}${{matrix.extension}} -output target/universal-apple-darwin/release/${{matrix.prefix}}reactive_graph_${{env.PLUGIN_REPOSITORY}}_${{PLUGIN}}${{matrix.extension}}
+          done
+        if: matrix.target == 'universal-apple-darwin'
       - name: Create Release Archive
         id: archive
         uses: ksm2/archive-action@v1
