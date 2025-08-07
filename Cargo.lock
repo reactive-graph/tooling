@@ -126,7 +126,7 @@ checksum = "e539d3fca749fcee5236ab05e93a52867dd549cc157c8cb7f99595f3cedffdb5"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -254,7 +254,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -419,7 +419,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "strsim",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -430,7 +430,7 @@ checksum = "fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead"
 dependencies = [
  "darling_core",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -460,17 +460,6 @@ name = "deployment-all"
 version = "0.10.0"
 
 [[package]]
-name = "derivative"
-version = "2.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fcc3dd5e9e9c0b295d6e1e4d811fb6f157d5ffd784b8d202fc62eac8035a770b"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 1.0.109",
-]
-
-[[package]]
 name = "derive_more"
 version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -487,7 +476,7 @@ checksum = "bda628edc44c4bb645fbe0f758797143e4e07926f7ebf4e9bdfbd3d2ce621df3"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
  "unicode-xid",
 ]
 
@@ -554,17 +543,6 @@ checksum = "85649ca51fd72272d7821adaf274ad91c288277713d9c18820d8499a7ff69e9a"
 dependencies = [
  "typenum",
  "version_check",
-]
-
-[[package]]
-name = "getrandom"
-version = "0.2.16"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "335ff9f135e4384c8150d6f27c6daed433577f86b4750418338c01a1a2528592"
-dependencies = [
- "cfg-if",
- "libc",
- "wasi 0.11.1+wasi-snapshot-preview1",
 ]
 
 [[package]]
@@ -686,7 +664,7 @@ dependencies = [
  "libflate",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -837,30 +815,31 @@ checksum = "a94d21414c1f4a51209ad204c1776a3d0765002c76c6abcb602a6f09f1e881c7"
 
 [[package]]
 name = "log4rs"
-version = "1.3.0"
+version = "1.4.0-rc2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0816135ae15bd0391cf284eab37e6e3ee0a6ee63d2ceeb659862bd8d0a984ca6"
+checksum = "9f3b886e5f9cc009cfe1bb242b7bc5b29e98d0753d55a928eac2cec44365476e"
 dependencies = [
  "anyhow",
  "arc-swap",
  "chrono",
- "derivative",
+ "derive_more",
  "fnv",
  "humantime",
  "libc",
  "log",
  "log-mdc",
- "once_cell",
+ "mock_instant",
  "parking_lot",
  "rand",
  "serde",
  "serde-value",
  "serde_json",
  "serde_yaml",
- "thiserror 1.0.69",
+ "thiserror",
  "thread-id",
  "toml",
  "typemap-ors",
+ "unicode-segmentation",
  "winapi",
 ]
 
@@ -905,6 +884,12 @@ dependencies = [
  "wasi 0.11.1+wasi-snapshot-preview1",
  "windows-sys 0.59.0",
 ]
+
+[[package]]
+name = "mock_instant"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dce6dd36094cac388f119d2e9dc82dc730ef91c32a6222170d630e5414b956e6"
 
 [[package]]
 name = "num-traits"
@@ -1034,20 +1019,19 @@ checksum = "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f"
 
 [[package]]
 name = "rand"
-version = "0.8.5"
+version = "0.9.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
+checksum = "6db2770f06117d490610c7488547d543617b21bfa07796d7a12f6f1bd53850d1"
 dependencies = [
- "libc",
  "rand_chacha",
  "rand_core",
 ]
 
 [[package]]
 name = "rand_chacha"
-version = "0.3.1"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
+checksum = "d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb"
 dependencies = [
  "ppv-lite86",
  "rand_core",
@@ -1055,11 +1039,11 @@ dependencies = [
 
 [[package]]
 name = "rand_core"
-version = "0.6.4"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
+checksum = "99d9a13982dcf210057a8a78572b2217b667c3beacbf3a0d8b454f6f82837d38"
 dependencies = [
- "getrandom 0.2.16",
+ "getrandom",
 ]
 
 [[package]]
@@ -1085,7 +1069,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-behaviour-model-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "dashmap",
  "reactive-graph-graph",
@@ -1093,14 +1077,14 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "thiserror 2.0.12",
+ "thiserror",
  "typed-builder",
 ]
 
 [[package]]
 name = "reactive-graph-behaviour-service-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "async-trait",
  "reactive-graph-behaviour-model-api",
@@ -1115,7 +1099,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-command-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "clap",
  "reactive-graph-graph",
@@ -1132,7 +1116,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-config-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "num_cpus",
  "reactive-graph-remotes-model",
@@ -1142,14 +1126,14 @@ dependencies = [
 [[package]]
 name = "reactive-graph-graph"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "const_format",
  "dashmap",
  "schemars",
  "serde",
  "serde_json",
- "thiserror 2.0.12",
+ "thiserror",
  "typed-builder",
  "uuid",
  "wildmatch",
@@ -1158,7 +1142,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-lifecycle"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "async-trait",
 ]
@@ -1166,7 +1150,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-plugin-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "async-trait",
  "http",
@@ -1183,7 +1167,7 @@ dependencies = [
  "serde",
  "serde_json",
  "springtime-di",
- "thiserror 2.0.12",
+ "thiserror",
  "tokio-stream",
  "uuid",
 ]
@@ -1191,34 +1175,34 @@ dependencies = [
 [[package]]
 name = "reactive-graph-plugin-derive"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 
 [[package]]
 name = "reactive-graph-reactive-derive"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "darling",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
 name = "reactive-graph-reactive-model-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "reactive-graph-graph",
  "serde_json",
- "thiserror 2.0.12",
+ "thiserror",
  "uuid",
 ]
 
 [[package]]
 name = "reactive-graph-reactive-model-impl"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "dashmap",
  "reactive-graph-behaviour-model-api",
@@ -1233,7 +1217,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-reactive-service-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "async-trait",
  "crossbeam",
@@ -1250,14 +1234,14 @@ dependencies = [
  "serde",
  "serde_json",
  "springtime-di",
- "thiserror 2.0.12",
+ "thiserror",
  "uuid",
 ]
 
 [[package]]
 name = "reactive-graph-remotes-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "chrono",
  "serde",
@@ -1267,7 +1251,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-runtime-model"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "reactive-graph-graph",
  "serde",
@@ -1278,10 +1262,10 @@ dependencies = [
 [[package]]
 name = "reactive-graph-serde"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "serde_json",
- "thiserror 2.0.12",
+ "thiserror",
 ]
 
 [[package]]
@@ -1319,7 +1303,7 @@ dependencies = [
 [[package]]
 name = "reactive-graph-type-system-api"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "async-trait",
  "reactive-graph-graph",
@@ -1330,19 +1314,19 @@ dependencies = [
  "rust-embed",
  "serde_json",
  "springtime-di",
- "thiserror 2.0.12",
+ "thiserror",
  "uuid",
 ]
 
 [[package]]
 name = "reactive-graph-type-system-derive"
 version = "0.10.0"
-source = "git+https://github.com/reactive-graph/reactive-graph.git#014aeaf355536b6f8692a2adf9cc8948d4ac4989"
+source = "git+https://github.com/reactive-graph/reactive-graph.git#9c5547d39fce81f9b04d7667ae2ce435f81e5019"
 dependencies = [
  "darling",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1371,7 +1355,7 @@ checksum = "1165225c21bff1f3bbce98f5a1f889949bc902d3575308cc7b0de30b4f6d27c7"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1401,7 +1385,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rust-embed-utils",
- "syn 2.0.104",
+ "syn",
  "walkdir",
 ]
 
@@ -1472,7 +1456,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "serde_derive_internals",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1514,7 +1498,7 @@ checksum = "5b0276cf7f2c73365f7157c8123c21cd9a50fbbd844757af28ca1f5925fc2a00"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1525,7 +1509,7 @@ checksum = "18d26a20a969b9e3fdf2fc2d9f21eda6c40e2de84c9408bb5d3b05d499aae711"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1608,7 +1592,7 @@ dependencies = [
  "inventory",
  "itertools 0.14.0",
  "springtime-di-derive",
- "thiserror 2.0.12",
+ "thiserror",
  "tracing",
 ]
 
@@ -1622,7 +1606,7 @@ dependencies = [
  "itertools 0.12.1",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1651,18 +1635,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
-]
-
-[[package]]
-name = "syn"
-version = "1.0.109"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237"
-dependencies = [
- "proc-macro2",
- "quote",
- "unicode-ident",
+ "syn",
 ]
 
 [[package]]
@@ -1678,31 +1651,11 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.69"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52"
-dependencies = [
- "thiserror-impl 1.0.69",
-]
-
-[[package]]
-name = "thiserror"
 version = "2.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "567b8a2dae586314f7be2a752ec7474332959c6460e02bde30d702a66d488708"
 dependencies = [
- "thiserror-impl 2.0.12",
-]
-
-[[package]]
-name = "thiserror-impl"
-version = "1.0.69"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.104",
+ "thiserror-impl",
 ]
 
 [[package]]
@@ -1713,17 +1666,17 @@ checksum = "7f7cf42b4507d8ea322120659672cf1b9dbb93f8f2d4ecfd6e51350ff5b17a1d"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
 name = "thread-id"
-version = "4.2.2"
+version = "5.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cfe8f25bbdd100db7e1d34acf7fd2dc59c4bf8f7483f505eaa7d4f12f76cc0ea"
+checksum = "99043e46c5a15af379c06add30d9c93a6c0e8849de00d244c4a2c417da128d80"
 dependencies = [
  "libc",
- "winapi",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -1753,9 +1706,9 @@ dependencies = [
 
 [[package]]
 name = "toml"
-version = "0.8.23"
+version = "0.8.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc1beb996b9d83529a9e75c17a1686767d148d70663143c7854d8b4a09ced362"
+checksum = "c6a4b9e8023eb94392d3dca65d717c53abc5dad49c07cb65bb8fcd87115fa325"
 dependencies = [
  "serde",
  "serde_spanned",
@@ -1774,23 +1727,16 @@ dependencies = [
 
 [[package]]
 name = "toml_edit"
-version = "0.22.27"
+version = "0.21.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "41fe8c660ae4257887cf66394862d21dbca4a6ddd26f04a3560410406a2f819a"
+checksum = "6a8534fd7f78b5405e860340ad6575217ce99f38d4d5c8f2442cb5ecb50090e1"
 dependencies = [
  "indexmap",
  "serde",
  "serde_spanned",
  "toml_datetime",
- "toml_write",
  "winnow",
 ]
-
-[[package]]
-name = "toml_write"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801"
 
 [[package]]
 name = "tracing"
@@ -1811,7 +1757,7 @@ checksum = "81383ab64e72a7a8b8e13130c49e3dab29def6d0c7d76a03087b3cf71c5c6903"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1840,7 +1786,7 @@ checksum = "60d8d828da2a3d759d3519cdf29a5bac49c77d039ad36d0782edadbf9cd5415b"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -1909,7 +1855,7 @@ version = "1.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3cf4199d1e5d15ddd86a694e4d0dffa9c323ce759fea589f00fef9d81cc1931d"
 dependencies = [
- "getrandom 0.3.3",
+ "getrandom",
  "js-sys",
  "serde",
  "sha1_smol",
@@ -1969,7 +1915,7 @@ dependencies = [
  "log",
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
  "wasm-bindgen-shared",
 ]
 
@@ -1991,7 +1937,7 @@ checksum = "8ae87ea40c9f689fc23f209965b6fb8a99ad69aeeb0231408be24920604395de"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -2063,7 +2009,7 @@ checksum = "a47fddd13af08290e67f4acabf4b459f647552718f683a7b415d290ac744a836"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -2074,7 +2020,7 @@ checksum = "bd9211b69f8dcdfa817bfd14bf1c97c9188afa36f4750130fcdf3f400eca9fa8"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
 
 [[package]]
@@ -2250,9 +2196,9 @@ checksum = "271414315aff87387382ec3d271b52d7ae78726f5d44ac98b4f4030c91880486"
 
 [[package]]
 name = "winnow"
-version = "0.7.12"
+version = "0.5.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f3edebf492c8125044983378ecb5766203ad3b4c2f7a922bd7dd207f6d443e95"
+checksum = "f593a95398737aeed53e489c785df13f3618e41dbcd6718c6addbf1395aa6876"
 dependencies = [
  "memchr",
 ]
@@ -2283,5 +2229,5 @@ checksum = "9ecf5b4cc5364572d7f4c329661bcc82724222973f2cab6f050a4e5c22f75181"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.104",
+ "syn",
 ]
