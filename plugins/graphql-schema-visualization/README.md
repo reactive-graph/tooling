@@ -15,7 +15,7 @@ Visualizes the GraphQL schema.
 
 ## GraphQL API
 
-The GraphQL API allows low level access to the *Reactive Graph Flow*:
+The GraphQL API allows low level access to the *Reactive Graph*:
 
 1. Type System
 2. Instance System
@@ -37,7 +37,7 @@ The GraphQL API allows low level access to the *Reactive Graph Flow*:
 
 ## Dynamic Graph API
 
-The Dynamic Graph API enables high level access to the *Reactive Graph Flow*. It's dynamically built upon the type
+The Dynamic Graph API enables high level access to the *Reactive Graph*. It's dynamically built upon the type
 system and provides type safe access to:
 
 1. Query for instances
