@@ -25,7 +25,6 @@ concurrency:
 
 env:
   CARGO_TERM_COLOR: always
-  WORKSPACE_ROOT_MANIFEST_DIR: "/home/runner/work/tooling/tooling"
   AWS_LC_SYS_PREBUILT_NASM: 1
   PLUGIN_REPOSITORY: "tooling"
   PLUGINS: "graphql-client graphql-schema-visualization"
@@ -416,7 +415,7 @@ jobs:
         run: |
           for PLUGIN in ${{env.PLUGINS}}; do
             # It's important to change into the plugin directory and building each package
-            cd ${{env.WORKSPACE_ROOT_MANIFEST_DIR}}/plugins/$PLUGIN
+            cd ${{env.GITHUB_WORKSPACE}}/plugins/$PLUGIN
             cargo deb -p reactive-graph-${{env.PLUGIN_REPOSITORY}}-$PLUGIN --target=${{ matrix.target }} --deb-revision ${{steps.tag.outputs.tag}}
           done
         env:
@@ -426,7 +425,7 @@ jobs:
         run: |
           for PLUGIN in ${{env.PLUGINS}}; do
             # It's important to change into the plugin directory and building each package
-            cd ${{env.WORKSPACE_ROOT_MANIFEST_DIR}}/plugins/$PLUGIN
+            cd ${{env.GITHUB_WORKSPACE}}/plugins/$PLUGIN
             cargo deb -p reactive-graph-${{env.PLUGIN_REPOSITORY}}-$PLUGIN --target=${{ matrix.target }} --deb-revision nightly
           done
         env:
