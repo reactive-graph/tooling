@@ -31,7 +31,7 @@ uuid = { workspace = true }
 reactive-graph-plugin-api = { workspace = true }
 
 [build-dependencies]
-static-files = "0.2.5"
+static-files = "0.3.1"
 
 [lib]
 # Plugins use crate-type cdylib
