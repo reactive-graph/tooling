@@ -260,7 +260,7 @@ jobs:
           matrix.target == 'powerpc64le-unknown-linux-gnu' ||
           matrix.target == 'riscv64gc-unknown-linux-gnu'
       - name: Setup Node.js 18
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 18
       - name: Install Yarn
@@ -421,7 +421,7 @@ jobs:
         with:
           target: ${{ matrix.target }}
       - name: Setup Node.js 18
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 18
       - name: Install Yarn
