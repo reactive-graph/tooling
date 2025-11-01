@@ -594,6 +594,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "http"
+version = "1.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f4a85d31aea989eead29a3aaf9e1115a180df8282431156e533de47660892565"
+dependencies = [
+ "bytes",
+ "fnv",
+ "itoa",
+]
+
+[[package]]
 name = "humantime"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1138,7 +1149,7 @@ version = "0.10.0"
 source = "git+https://github.com/reactive-graph/reactive-graph.git#31eff9bb31f9597d8879e6cc0e602a9c90342f13"
 dependencies = [
  "async-trait",
- "http",
+ "http 0.2.12",
  "reactive-graph-behaviour-model-api",
  "reactive-graph-command-model",
  "reactive-graph-config-model",
@@ -1258,7 +1269,7 @@ name = "reactive-graph-tooling-graphql-client"
 version = "0.10.0"
 dependencies = [
  "async-trait",
- "http",
+ "http 1.3.1",
  "log",
  "log4rs",
  "mime_guess",
@@ -1274,7 +1285,7 @@ name = "reactive-graph-tooling-graphql-schema-visualization"
 version = "0.10.0"
 dependencies = [
  "async-trait",
- "http",
+ "http 1.3.1",
  "log",
  "log4rs",
  "mime_guess",
